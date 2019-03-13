@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>測試</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="colorpicker/css/colorpicker.css" />
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+    
+  </head>
+ 
+  <body>
+    <a href="#" style="display: block"><div id="test" style="width: 100px;height: 100px;background-color: aqua"></div></a>
+  </body>
+  <script>
+      
+      $(function(){
+        $('#test').ColorPicker({
+            color: '#0000ff',
+            onShow: function (colpkr) {
+                $(colpkr).fadeIn(500);
+                return false;
+            },
+            onHide: function (colpkr) {
+                $(colpkr).fadeOut(500);
+                return false;
+            },
+            onChange: function (hsb, hex, rgb) {
+                $('body').css('background-color', '#' + hex);
+            }
+        });
+      })
+  </script>
+</html>

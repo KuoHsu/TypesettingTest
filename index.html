@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>測試</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      type="text/css"
+      href="colorpicker/css/colorpicker.css"
+    />
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+  </head>
+
+  <body>
+    <header class="box" data-name="Header">
+      <div id="logo" class="box" data-name="Logo"></div>
+      <div id="test" style="width: 100px; height: 100px"></div>
+      <ul id="main_menu">
+        <li class="main_item">
+          Select 1
+          <ul class="sub_menu">
+            <li class="sub_item">1</li>
+            <li class="sub_item">2</li>
+            <li class="sub_item">3</li>
+            <li class="sub_item">4</li>
+          </ul>
+        </li>
+        <li class="main_item">
+          Select 2
+          <ul class="sub_menu">
+            <li class="sub_item">1</li>
+            <li class="sub_item">2</li>
+            <li class="sub_item">3</li>
+            <li class="sub_item">4</li>
+          </ul>
+        </li>
+        <li class="main_item">
+          Select 3
+          <ul class="sub_menu">
+            <li class="sub_item">1</li>
+            <li class="sub_item">2</li>
+            <li class="sub_item">3</li>
+            <li class="sub_item">4</li>
+          </ul>
+        </li>
+        <li class="main_item">
+          Select 4
+          <ul class="sub_menu">
+            <li class="sub_item">1</li>
+            <li class="sub_item">2</li>
+            <li class="sub_item">3</li>
+            <li class="sub_item">4</li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <div id="main_container" class="box" data-name="Container">
+      <div id="content" class="box" data-name="Content">
+        <div id="color_picker_containers">
+          <div class="color_picker_container">
+            <a href="#"><div class="color_picker" style="background-color:#fff9f0"></div></a>
+            <br />
+            <span class="target_name">Header</span><br />
+            <span class="color_hex">#fff9f0</span>
+          </div>
+          <div class="color_picker_container">
+            <a href="#"><div class="color_picker" style="background-color:#ffffff"></div></a>
+            <br />
+            <span class="target_name">Selector</span><br />
+            <span class="color_hex">#ffffff</span>
+          </div>
+          <div class="color_picker_container">
+            <a href="#"><div class="color_picker" style="background-color:#ffdba2"></div></a>
+            <br />
+            <span class="target_name">SubSelector</span><br />
+            <span class="color_hex">#ffdba2</span>
+          </div>
+         
+          <div class="color_picker_container">
+            <a href="#"><div class="color_picker" style="background-color:#ffcdab"></div></a>
+            <br />
+            <span class="target_name">Container</span><br />
+            <span class="color_hex">#ffcdab</span>
+          </div>
+          <div class="color_picker_container">
+            <a href="#"><div class="color_picker" style="background-color:#ffffff"></div></a>
+            <br />
+            <span class="target_name">Content</span><br />
+            <span class="color_hex">#ffffff</span>
+          </div>
+          <div class="color_picker_container">
+            <a href="#"><div class="color_picker" style="background-color:#5d5d5a"></div></a>
+            <br />
+            <span class="target_name">Footer</span><br />
+            <span class="color_hex">#5d5d5a</span>
+          </div>
+        </div>
+
+        <!--<div class="picker_title">
+            Header: <input type="text" class="color_input" />
+          </div>
+          <div class="picker_title">
+            Selector: <input type="text" class="color_input" />
+          </div>
+          <div class="picker_title">
+            SubSelector: <input type="text" class="color_input" />
+          </div>
+          <div class="picker_title">
+            Container: <input type="text" class="color_input" />
+          </div>
+          <div class="picker_title">
+            Content: <input type="text" class="color_input" />
+          </div>
+          <div class="picker_title">
+            Footer: <input type="text" class="color_input" />
+          </div>-->
+      </div>
+    </div>
+    <footer class="box" data-name="Footer">
+    </footer>
+  </body>
+  <script>
+    const targets = [
+      "header",
+      ".main_item",
+      ".sub_item",
+      "#main_container",
+      "#content",
+      "footer"
+    ];
+    var inputs = $("input");
+    /*i*/
+    $(function() {
+      var i = 0;
+      $(".color_picker:eq(0)").ColorPicker({
+        color: "#ffffff",
+        /*target: targets[0],*/
+        onChange: function(hsb, hex, rgb) {
+          $("header, .color_picker:eq(0)").css("background-color", "#" + hex);
+          $(".color_hex:eq(0)").text("#" + hex);
+        }
+      });
+      $(".color_picker:eq(1)").ColorPicker({
+        color: "#ffffff",
+        /*target: targets[0],*/
+        onChange: function(hsb, hex, rgb) {
+          $(".main_item, .color_picker:eq(1)").css("background-color", "#" + hex);
+          $(".color_hex:eq(1)").text("#" + hex);
+        }
+      });
+      $(".color_picker:eq(2)").ColorPicker({
+        color: "#ffffff",
+        /*target: targets[0],*/
+        onChange: function(hsb, hex, rgb) {
+          $(".sub_menu, .color_picker:eq(2)").css("background-color", "#" + hex);
+          $(".color_hex:eq(2)").text("#" + hex);
+
+        }
+      });
+      $(".color_picker:eq(3)").ColorPicker({
+        color: "#ffffff",
+        /*target: targets[0],*/
+        onChange: function(hsb, hex, rgb) {
+          $("#main_container, .color_picker:eq(3)").css("background-color", "#" + hex);
+          $(".color_hex:eq(3)").text("#" + hex);
+        }
+      });
+      $(".color_picker:eq(4)").ColorPicker({
+        color: "#ffffff",
+        /*target: targets[0],*/
+        onChange: function(hsb, hex, rgb) {
+          $("#content, .color_picker:eq(4)").css("background-color", "#" + hex);
+          $(".color_hex:eq(4)").text("#" + hex);
+        }
+      });
+      $(".color_picker:eq(5)").ColorPicker({
+        color: "#ffffff",
+        /*target: targets[0],*/
+        onChange: function(hsb, hex, rgb) {
+          $("footer, .color_picker:eq(5)").css("background-color", "#" + hex);
+          $(".color_hex:eq(5)").text("#" + hex);
+        }
+      });
+    });
+  </script>
+</html>
