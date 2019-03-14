@@ -2,20 +2,37 @@
 <html>
   <head>
     <title>測試</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/new_style.css" />
+    <link rel="stylesheet" href="css/block1.css" />
+    <link rel="stylesheet" href="css/block2.css" />
+    <link rel="stylesheet" href="css/icon.css" />
+    <link rel="stylesheet" href="css/picker.css" />
     <link
       rel="stylesheet"
       media="screen"
       type="text/css"
       href="colorpicker/css/colorpicker.css"
     />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
   </head>
 
+
+
+
+
+
+
+
+
   <body>
-    <header class="box" data-name="Header">
-      <div id="logo" class="box" data-name="Logo"></div>
+    <!--Block1 style: Block1.css-->
+    <header class="show_layoutName" data-name="Header">
+      <div id="logo" class="pos_re" data-name="Logo">
+          <i class="fas fa-paint-brush"></i>
+          <span>TypeCool</span> 
+      </div>
       <div id="test" style="width: 100px; height: 100px"></div>
       <ul id="main_menu">
 
@@ -59,14 +76,49 @@
        
       </ul>
     </header>
-    <div id="main_container" class="box" data-name="Container">
-      <div id="content" class="box" data-name="Content">
+    <div id="information" class="pos_re show_layoutName" data-name="Information">
+      <div id="Titles">
+        <div id="title"> TypeSetting</div>
+        <div id="subtitle"> Create your own web-style</div>
+      </div>
+      <div id="palette">
+        <div class="palette_color"></div>
+        <div class="palette_color"></div>
+        <div class="palette_color"></div>
+        <div class="palette_color"></div>
+        <div class="palette_color"></div>
+      </div>
+      <div id="icon_box">
+          <i class="far fa-eye icon" data-function-name="Watch Result"></i>
+          <i class="fas fa-palette icon" data-function-name="Adjust Color"></i>
+          <i class="fas fa-fill-drip icon" data-function-name="Fill Imagine"></i>
+          <br>
+          <i class="fas fa-angle-double-down" id="arrow_down"></i>
+      </div>
+    </div>
+    <!--Block1 end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Block2 style: Block2.css-->
+    <div id="main_container" class="pos_re show_layoutName" data-name="Container">
+      <div id="content" class="pos_re show_layoutName" data-name="Content">
         <div id="color_picker_containers">
           <div class="color_picker_container">
-            <a href="#"><div class="color_picker" style="background-color:#fff9f0"></div></a>
+            <a href="#"><div class="color_picker" style="background-color:#ffffff;"></div></a>
             <br />
             <span class="target_name">Header</span><br />
-            <span class="color_hex">#fff9f0</span>
+            <span class="color_hex">#ffffff</span>
           </div>
           <div class="color_picker_container">
             <a href="#"><div class="color_picker" style="background-color:#ffffff"></div></a>
@@ -75,17 +127,17 @@
             <span class="color_hex">#ffffff</span>
           </div>
           <div class="color_picker_container">
-            <a href="#"><div class="color_picker" style="background-color:#ffdba2"></div></a>
+            <a href="#"><div class="color_picker" style="background-color:#ffffff"></div></a>
             <br />
             <span class="target_name">SubSelector</span><br />
-            <span class="color_hex">#ffdba2</span>
+            <span class="color_hex">#ffffff</span>
           </div>
          
           <div class="color_picker_container">
-            <a href="#"><div class="color_picker" style="background-color:#ffcdab"></div></a>
+            <a href="#"><div class="color_picker" style="background-color:#00bd10;"></div></a>
             <br />
             <span class="target_name">Container</span><br />
-            <span class="color_hex">#ffcdab</span>
+            <span class="color_hex">#00bd10</span>
           </div>
           <div class="color_picker_container">
             <a href="#"><div class="color_picker" style="background-color:#ffffff"></div></a>
@@ -101,28 +153,21 @@
           </div>
           <div style="font-family: '微軟正黑體';font-size: 18px;font-weight: bold;margin-top: 4px">點擊上方色塊可更改頁面對應區塊的顏色</div>
         </div>
-
-        <!--<div class="picker_title">
-            Header: <input type="text" class="color_input" />
-          </div>
-          <div class="picker_title">
-            Selector: <input type="text" class="color_input" />
-          </div>
-          <div class="picker_title">
-            SubSelector: <input type="text" class="color_input" />
-          </div>
-          <div class="picker_title">
-            Container: <input type="text" class="color_input" />
-          </div>
-          <div class="picker_title">
-            Content: <input type="text" class="color_input" />
-          </div>
-          <div class="picker_title">
-            Footer: <input type="text" class="color_input" />
-          </div>-->
       </div>
     </div>
-    <footer class="box" data-name="Footer">
+    <!--Block2 end-->
+
+
+    <footer class="pos_re show_layoutName" data-name="Footer">
+      <a href="https://www.eyecon.ro/colorpicker/" target="_blank">
+        <i class="fas fa-brush"></i>
+        Color Picker</a><br>
+      <a href="https://colorhunt.co/palettes/popular" target="_blank">
+        <i class="fas fa-palette"></i>
+        Color Hunt</a><br>
+      <a href="https://fontawesome.com/" target="_blank">
+        <i class="fas fa-feather-alt"></i>
+        Font Awesome</a>
     </footer>
   </body>
   <script>

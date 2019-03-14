@@ -1,0 +1,44 @@
+/*page setting*/
+body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    overflow-x: hidden;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+
+/*page layout style setting*/
+
+
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #5d5d5d;
+    bottom: 0;
+    position: fixed;
+}
+
+.pos_re{position: relative;}
+.show_layoutName::before{
+    content: attr(data-name);
+    top: 0;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 16px;
+    padding:2px;
+    border-radius: 0 0 5px 5px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    display: block;  
+    position: absolute;
+}
+
+
+/*color picker style setting*/
+

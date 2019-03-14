@@ -1,0 +1,15 @@
+#main_container{
+    height: 2500px;
+    width: 120%;
+    left: -10%;
+    background-color: #00bd10;
+    border-radius: 1200px / 400px 400px 0 0;
+}
+#content{
+    top: 100px;
+    height: 530px;
+    width: 1000px;
+    background-color: #ffffff;
+    margin: auto;
+    box-shadow: 0 0 10px 1px #00000027
+}
