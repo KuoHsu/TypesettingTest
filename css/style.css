@@ -1,0 +1,13 @@
+.fon24{font-size: 24px;}.fon30{font-size: 30px;}.fon36{font-size: 36px;}
+.fon42{font-size: 42px;}.fon48{font-size: 48px;}.fon54{font-size: 54px;}
+.fon60{font-size: 60px;}.fon72{font-size: 72px;}.fon80{font-size: 80px;}
+
+.fonFamCour{font-family: 'Courier New', Courier, monospace;}
+.fonFamFran{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+.fonFamGill{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+.fontBol{font-weight: bold;}
+
+.posRel{position: relative;}
+.posAbs{position: absolute;}
+.posFix{position: fixed;}
